@@ -29,10 +29,11 @@ class FeatureActionCard extends StatelessWidget {
         backgroundColor: backgroundColor,
         borderRadius: 8.0,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(iconPath, width: 22, height: 22,),
             UIHelper.horizontalSpaceXS,
-            Expanded(
+            Flexible(
               child: AppText(
                 title,
                 color: c.white,

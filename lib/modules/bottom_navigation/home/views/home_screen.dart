@@ -110,26 +110,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     AppText("OGPAY Features", fontSize: 14, fontWeight: FontWeight.w600,),
                     UIHelper.verticalSpaceM,
-                    Row(
-                      children: [
-                        FeatureActionCard(
-                          iconPath: ic.bank,
-                          title: "Bank Transfer",
-                          backgroundColor: c.primary,
-                        ),
-                        UIHelper.horizontalSpaceS,
-                        FeatureActionCard(
-                          iconPath: ic.cash,
-                          title: "Pay Money",
-                          backgroundColor: c.primary,
-                        ),
-                        UIHelper.horizontalSpaceS,
-                        FeatureActionCard(
-                          iconPath: ic.wallet,
-                          title: "OGPAY Wallet",
-                          backgroundColor: c.primary,
-                        ),
-                      ],
+                    IntrinsicHeight(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          FeatureActionCard(
+                            iconPath: ic.bank,
+                            title: "Bank Transfer",
+                            backgroundColor: c.primary,
+                          ),
+                          UIHelper.horizontalSpaceS,
+                          FeatureActionCard(
+                            iconPath: ic.cash,
+                            title: "Pay Money",
+                            backgroundColor: c.primary,
+                          ),
+                          UIHelper.horizontalSpaceS,
+                          FeatureActionCard(
+                            iconPath: ic.wallet,
+                            title: "OGPAY Wallet",
+                            backgroundColor: c.primary,
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 )

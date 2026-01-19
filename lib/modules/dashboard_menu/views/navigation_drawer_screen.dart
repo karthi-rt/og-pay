@@ -77,7 +77,7 @@ class _NavigationDrawerScreenState extends State<NavigationDrawerScreen> {
     return InkWell(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 8.0),
+        margin: const EdgeInsets.symmetric(vertical: 10.0),
         padding: EdgeInsets.zero,
         child: Row(
           children: [
