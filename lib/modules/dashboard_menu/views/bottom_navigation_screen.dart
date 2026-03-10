@@ -30,8 +30,8 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   final List<Widget> _pages = [
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const HomeScreen(), ),// index 0
-    GetBuilder<HomeController>(init: HomeController(), builder: (_) => const InboxScreen(), ),// index 1
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const ChatScreen(), ),// index 2
+    GetBuilder<HomeController>(init: HomeController(), builder: (_) => const InboxScreen(), ),// index 1
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const QRScreen(), ),// index 3
   ];
 

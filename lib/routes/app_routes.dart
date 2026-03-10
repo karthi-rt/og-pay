@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:ogpay/modules/dashboard_menu/views/dashboard_menu.dart';
 import 'package:ogpay/modules/navigation_drawer/referrals/views/referral_program_screen.dart';
+import 'package:ogpay/modules/navigation_drawer/transactions/views/transaction_history.dart';
 import 'package:ogpay/modules/onboarding/controllers/onboarding_controller.dart';
 import 'package:ogpay/modules/onboarding/views/onboarding_screen.dart';
 import 'package:ogpay/modules/splash/controllers/splash_controller.dart';
@@ -15,6 +16,7 @@ class AppRoutes {
   static const onboarding = '/onboarding';
   static const dashboardMenu = '/dashboardMenu';
   static const referralProgram = '/referralProgram';
+  static const transactionHistory = '/transactionHistory';
 
   static final routes = [
     GetPage(
@@ -50,6 +52,15 @@ class AppRoutes {
     GetPage(
       name: referralProgram,
       page: () => const ReferralProgramScreen(),
+      /*binding: BindingsBuilder(() {
+        Get.put(OnboardingController());
+      }),*/
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: transactionHistory,
+      page: () => const TransactionHistory(),
       /*binding: BindingsBuilder(() {
         Get.put(OnboardingController());
       }),*/

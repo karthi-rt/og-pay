@@ -30,6 +30,7 @@ class _DashboardMenuState extends State<DashboardMenu> {
                 if(id == 0) {
                 } else if (id == 1) {
                 } else if (id == 2) {
+                  Get.toNamed(AppRoutes.transactionHistory);
                 } else if (id == 3) {
                   Get.toNamed(AppRoutes.referralProgram);
                 } else if (id == 4) {
