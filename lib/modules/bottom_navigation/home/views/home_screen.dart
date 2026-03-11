@@ -11,7 +11,7 @@ import 'package:ogpay/core/widgets/app_button.dart';
 import 'package:ogpay/core/widgets/app_card.dart';
 import 'package:ogpay/core/widgets/app_text.dart';
 import 'package:ogpay/modules/bottom_navigation/home/controller/home_controller.dart';
-import 'package:ogpay/modules/bottom_navigation/home/widgets/feature_action_card.dart';
+import '../../../widgets/feature_action_card.dart';
 
 /**
  * Created by karthi_rt on 09-01-2026.

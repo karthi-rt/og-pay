@@ -29,6 +29,7 @@ class _DashboardMenuState extends State<DashboardMenu> {
                 debugPrint("Tapped id $id");
                 if(id == 0) {
                 } else if (id == 1) {
+                  Get.toNamed(AppRoutes.myWallet);
                 } else if (id == 2) {
                   Get.toNamed(AppRoutes.transactionHistory);
                 } else if (id == 3) {

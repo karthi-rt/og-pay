@@ -31,7 +31,7 @@ class FeatureActionCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(iconPath, width: 22, height: 22,),
+            SvgPicture.asset(iconPath, width: 22, height: 22, color: c.white,),
             UIHelper.horizontalSpaceXS,
             Flexible(
               child: AppText(
