@@ -8,6 +8,7 @@ import 'package:ogpay/core/widgets/app_button.dart';
 import 'package:ogpay/core/widgets/app_card.dart';
 import 'package:ogpay/core/widgets/app_text.dart';
 import '../../../../core/utils/ui_helper.dart';
+import '../../../../routes/app_routes.dart';
 import '../../../widgets/feature_action_card.dart';
 
 /**
@@ -70,7 +71,7 @@ class _MyWalletState extends State<MyWallet> {
                   )
                 ),
                 UIHelper.verticalSpaceM,
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AppText("OGPAY Features", fontSize: 14, fontWeight: FontWeight.w600,),
@@ -89,6 +90,7 @@ class _MyWalletState extends State<MyWallet> {
                             iconPath: ic.cash,
                             title: "Transfer to Bank",
                             backgroundColor: c.primary,
+                            onTap: ()=> Get.toNamed(AppRoutes.transferToBank),
                           ),
                           UIHelper.horizontalSpaceS,
                           FeatureActionCard(

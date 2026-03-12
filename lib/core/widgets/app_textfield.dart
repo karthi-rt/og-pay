@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:ogpay/core/themes/app_colors.dart' as c;
+import 'package:ogpay/core/widgets/app_card.dart';
 
 
 /**
@@ -74,7 +75,9 @@ class _AppTextFieldState extends State<AppTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AppCard(
+      backgroundColor: c.white,
+      shadow: true, borderRadius: 36,
       margin: widget.margin,
       padding: widget.padding,
       child: FormBuilderTextField(
@@ -95,42 +98,44 @@ class _AppTextFieldState extends State<AppTextField> {
         ),
         decoration: InputDecoration(
           hintText: widget.hint,
+          border: InputBorder.none,
+          contentPadding: EdgeInsets.only(left: 16.0, top: 0, bottom: 0, right: 6.0),
           hintStyle: TextStyle(
             color: widget.hintColor ?? c.gray,
             fontSize: widget.fontSize ?? 14.0,
             fontFamily: widget.fontFamily ?? 'Poppins',
           ),
-          filled: true,
-          fillColor: widget.fillColor ?? c.inputBackground,
+          // filled: true,
+          // fillColor: widget.fillColor ?? c.inputBackground,
 
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-            borderSide: BorderSide(
-              color: widget.borderColor ?? c.border,
-              width: widget.borderWidth ?? 1,
-            ),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-            borderSide: BorderSide(
-              color: widget.borderColor ?? c.border,
-              width: widget.borderWidth ?? 1,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-            borderSide: BorderSide(
-              color: widget.borderColor ?? c.primary,
-              width: widget.borderWidth ?? 1,
-            ),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-            borderSide: BorderSide(
-              color: c.error,
-              width: widget.borderWidth ?? 1,
-            ),
-          ),
+          // border: OutlineInputBorder(
+          //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+          //   borderSide: BorderSide(
+          //     color: widget.borderColor ?? c.border,
+          //     width: widget.borderWidth ?? 1,
+          //   ),
+          // ),
+          // enabledBorder: OutlineInputBorder(
+          //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+          //   borderSide: BorderSide(
+          //     color: widget.borderColor ?? c.border,
+          //     width: widget.borderWidth ?? 1,
+          //   ),
+          // ),
+          // focusedBorder: OutlineInputBorder(
+          //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+          //   borderSide: BorderSide(
+          //     color: widget.borderColor ?? c.primary,
+          //     width: widget.borderWidth ?? 1,
+          //   ),
+          // ),
+          // errorBorder: OutlineInputBorder(
+          //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+          //   borderSide: BorderSide(
+          //     color: c.error,
+          //     width: widget.borderWidth ?? 1,
+          //   ),
+          // ),
 
           suffixIcon: widget.isPassword
               ? IconButton(
