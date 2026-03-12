@@ -1,12 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:ogpay/core/utils/ui_helper.dart';
-import 'package:ogpay/modules/bottom_navigation/chat/views/chat_screen.dart';
 import 'package:ogpay/modules/bottom_navigation/home/views/home_screen.dart';
-import 'package:ogpay/modules/bottom_navigation/inbox/view/inbox_screen.dart';
+import 'package:ogpay/modules/bottom_navigation/inbox/views/inbox_screen.dart';
+import 'package:ogpay/modules/bottom_navigation/promotions/views/promotions_screen.dart';
 import 'package:ogpay/modules/bottom_navigation/qr/view/qr_screen.dart';
 import 'package:ogpay/core/themes/app_colors.dart' as c;
 import 'package:ogpay/core/resources/app_icons.dart' as ic;
@@ -30,8 +28,8 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   final List<Widget> _pages = [
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const HomeScreen(), ),// index 0
-    GetBuilder<HomeController>(init: HomeController(), builder: (_) => const ChatScreen(), ),// index 2
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const InboxScreen(), ),// index 1
+    GetBuilder<HomeController>(init: HomeController(), builder: (_) => const PromotionsScreen(), ),// index 2
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const QRScreen(), ),// index 3
   ];
 
@@ -58,7 +56,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             _buildNavItem(ic.home, ic.home_fill, "Home", 0),
-            _buildNavItem(ic.chat, ic.chat_fill, "Chat", 1, badgeCount: 2),
+            _buildNavItem(ic.inbox, ic.inbox_fill, "Inbox", 1, badgeCount: 2),
             _buildNavItem(ic.promotion, ic.promotion_fill, "Promotions", 2, badgeCount: 3),
             UIHelper.horizontalSpaceXXL, // space for QR FAB
           ],

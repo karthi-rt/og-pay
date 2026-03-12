@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:ogpay/modules/dashboard_menu/views/dashboard_menu.dart';
 import 'package:ogpay/modules/navigation_drawer/my_wallet/views/transfer_to_bank.dart';
+import 'package:ogpay/modules/navigation_drawer/profile/views/account_details.dart';
 import 'package:ogpay/modules/navigation_drawer/referrals/views/referral_program_screen.dart';
 import 'package:ogpay/modules/navigation_drawer/transactions/views/transaction_history.dart';
 import 'package:ogpay/modules/onboarding/controllers/onboarding_controller.dart';
@@ -22,6 +23,7 @@ class AppRoutes {
   static const transactionHistory = '/transactionHistory';
   static const myWallet = '/myWallet';
   static const transferToBank = '/transferToBank';
+  static const accountDetails = '/accountDetails';
 
   static final routes = [
     GetPage(
@@ -84,6 +86,15 @@ class AppRoutes {
     GetPage(
       name: transferToBank,
       page: () => const TransferToBank(),
+      /*binding: BindingsBuilder(() {
+        Get.put(OnboardingController());
+      }),*/
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: accountDetails,
+      page: () => const AccountDetails(),
       /*binding: BindingsBuilder(() {
         Get.put(OnboardingController());
       }),*/

@@ -35,6 +35,7 @@ class AppTextField extends StatefulWidget {
   // Layout
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
+  final double? contentPaddingTap;
 
   // Validation
   final String? Function(String?)? validator;
@@ -64,6 +65,7 @@ class AppTextField extends StatefulWidget {
     this.validator,
     this.onChanged,
     this.initialValue,
+    this.contentPaddingTap,
   });
 
   @override
@@ -77,7 +79,7 @@ class _AppTextFieldState extends State<AppTextField> {
   Widget build(BuildContext context) {
     return AppCard(
       backgroundColor: c.white,
-      shadow: true, borderRadius: 36,
+      shadow: true, borderRadius: widget.borderRadius ?? 36,
       margin: widget.margin,
       padding: widget.padding,
       child: FormBuilderTextField(
@@ -99,7 +101,7 @@ class _AppTextFieldState extends State<AppTextField> {
         decoration: InputDecoration(
           hintText: widget.hint,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.only(left: 16.0, top: 0, bottom: 0, right: 6.0),
+          contentPadding: EdgeInsets.only(left: 16.0, top: widget.contentPaddingTap ?? 0, bottom: 0, right: 6.0),
           hintStyle: TextStyle(
             color: widget.hintColor ?? c.gray,
             fontSize: widget.fontSize ?? 14.0,

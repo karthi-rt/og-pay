@@ -28,6 +28,7 @@ class _DashboardMenuState extends State<DashboardMenu> {
               onItemSelected: (id) {
                 debugPrint("Tapped id $id");
                 if(id == 0) {
+                  Get.toNamed(AppRoutes.accountDetails);
                 } else if (id == 1) {
                   Get.toNamed(AppRoutes.myWallet);
                 } else if (id == 2) {

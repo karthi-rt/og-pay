@@ -20,3 +20,4 @@ const String onboarding_pay = 'assets/images/onboarding_pay.svg';
 const String onboarding_wallet = 'assets/images/onboarding_wallet.svg';
 const String onboarding_get_started = 'assets/images/onboarding_get_started.svg';
 const String mobile_share = 'assets/images/mobile_share.svg';
+const String disabled_account = 'assets/images/disabled_account.svg';

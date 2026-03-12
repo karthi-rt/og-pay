@@ -7,7 +7,6 @@ import 'package:ogpay/core/resources/app_images.dart' as img;
 import 'package:ogpay/core/widgets/app_button.dart';
 import 'package:ogpay/core/widgets/app_card.dart';
 import 'package:ogpay/core/widgets/app_text.dart';
-
 import '../../../../core/utils/ui_helper.dart';
 
 /**
