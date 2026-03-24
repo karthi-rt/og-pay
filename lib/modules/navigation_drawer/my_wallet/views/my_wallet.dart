@@ -51,7 +51,7 @@ class _MyWalletState extends State<MyWallet> {
                 UIHelper.verticalSpaceM,
                 const AppCard(
                   padding: EdgeInsets.all(12.0),
-                  borderRadius: 8,
+                  borderRadius: 14,
                   backgroundColor: c.primary,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,7 +63,7 @@ class _MyWalletState extends State<MyWallet> {
                       ),
                       UIHelper.verticalSpaceL,
                       AppText("OGPay ID Number", color: c.white, fontSize: 12, fontWeight: FontWeight.w600,),
-                      AppText("4479-1112-3456", color: c.white, fontSize: 14, fontWeight: FontWeight.w600,),
+                      AppText("4479-1112-3456", color: c.white, fontSize: 16, fontWeight: FontWeight.w600,),
                       UIHelper.verticalSpaceL,
                       AppText("Current Balance", color: c.white, fontSize: 12, fontWeight: FontWeight.w600,),
                       AppText("₹ 5468.40", color: c.white, fontSize: 14, fontWeight: FontWeight.w600,),
@@ -103,9 +103,15 @@ class _MyWalletState extends State<MyWallet> {
                     )
                   ],
                 ),
-                UIHelper.verticalSpaceXXL,
-                const AppText("Total Transactions", fontSize: 14, fontWeight: FontWeight.w600,),
-                UIHelper.verticalSpaceS,
+                UIHelper.verticalSpaceXL,
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AppText("Recent Transactions", fontSize: 14, fontWeight: FontWeight.w600,),
+                    AppText("See all", fontSize: 14, fontWeight: FontWeight.w600,),
+                  ],
+                ),
+                UIHelper.verticalSpaceM,
                 ListView.builder(
                   padding: const EdgeInsets.only(bottom: 30),
                   itemCount: 16,
