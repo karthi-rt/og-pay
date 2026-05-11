@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
+import 'package:ogpay/core/resources/app_strings.dart';
 import 'package:ogpay/modules/bottom_navigation/qr/view/qr_screen.dart';
 import 'package:ogpay/modules/dashboard_menu/views/dashboard_menu.dart';
+import 'package:ogpay/modules/navigation_drawer/help_and_support/views/reminder_screen.dart';
 import 'package:ogpay/modules/navigation_drawer/my_wallet/views/transfer_to_bank.dart';
 import 'package:ogpay/modules/navigation_drawer/profile/views/account_details.dart';
 import 'package:ogpay/modules/navigation_drawer/referrals/views/referral_program_screen.dart';
+import 'package:ogpay/modules/navigation_drawer/settings/views/verification.dart';
 import 'package:ogpay/modules/navigation_drawer/transactions/views/transaction_history.dart';
 import 'package:ogpay/modules/onboarding/controllers/onboarding_controller.dart';
 import 'package:ogpay/modules/onboarding/views/onboarding_screen.dart';
@@ -26,6 +29,8 @@ class AppRoutes {
   static const transferToBank = '/transferToBank';
   static const accountDetails = '/accountDetails';
   static const qr = '/qr';
+  static const reminder = '/reminder';
+  static const verification = '/verification';
 
   static final routes = [
     GetPage(
@@ -106,6 +111,24 @@ class AppRoutes {
     GetPage(
       name: qr,
       page: () => const QRScreen(),
+      /*binding: BindingsBuilder(() {
+        Get.put(OnboardingController());
+      }),*/
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: reminder,
+      page: () => const ReminderScreen(),
+      /*binding: BindingsBuilder(() {
+        Get.put(OnboardingController());
+      }),*/
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: verification,
+      page: () => const Verification(),
       /*binding: BindingsBuilder(() {
         Get.put(OnboardingController());
       }),*/

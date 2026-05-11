@@ -36,6 +36,7 @@ class _DashboardMenuState extends State<DashboardMenu> {
                 } else if (id == 3) {
                   Get.toNamed(AppRoutes.referralProgram);
                 } else if (id == 4) {
+                  Get.toNamed(AppRoutes.verification);
                 } else if (id == 5) {
                 } else if (id == 6) {
                 } else {

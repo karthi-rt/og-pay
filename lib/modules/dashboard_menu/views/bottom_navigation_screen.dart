@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:ogpay/core/utils/ui_helper.dart';
 import 'package:ogpay/modules/bottom_navigation/home/views/home_screen.dart';
@@ -8,6 +9,7 @@ import 'package:ogpay/modules/bottom_navigation/promotions/views/promotions_scre
 import 'package:ogpay/modules/bottom_navigation/qr/view/qr_screen.dart';
 import 'package:ogpay/core/themes/app_colors.dart' as c;
 import 'package:ogpay/core/resources/app_icons.dart' as ic;
+import 'package:ogpay/routes/app_routes.dart';
 import '../../../core/widgets/app_text.dart';
 import '../../bottom_navigation/home/controller/home_controller.dart';
 
@@ -30,7 +32,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const HomeScreen(), ),// index 0
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const InboxScreen(), ),// index 1
     GetBuilder<HomeController>(init: HomeController(), builder: (_) => const PromotionsScreen(), ),// index 2
-    GetBuilder<HomeController>(init: HomeController(), builder: (_) => const QRScreen(), ),// index 3
+    // GetBuilder<HomeController>(init: HomeController(), builder: (_) => const QRScreen(), ),// index 3
   ];
 
   void _onItemTapped(int index) {
@@ -42,7 +44,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     return Scaffold(
       body: _pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
-        onPressed: () { _onItemTapped(3);},
+        onPressed: () => Get.toNamed(AppRoutes.qr),
         backgroundColor: c.primary,
         shape: const CircleBorder(),
         child: const Icon(Icons.qr_code, size: 24), ),
